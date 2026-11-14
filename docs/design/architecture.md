@@ -77,6 +77,8 @@ telegram-schedule-bot/
 │   │   └── __init__.py
 │   └── test_services/
 │       └── __init__.py
+├── .github/
+│   └── pull_request_template.md        # Шаблон описания pull request (задача 2.11)
 ├── docs/                              # Документация проекта
 ├── logs/                              # Логи бота (в git попадает только .gitkeep)
 ├── data/                              # Тестовые данные (в git попадает только .gitkeep)
@@ -84,6 +86,7 @@ telegram-schedule-bot/
 ├── .gitignore
 ├── .pre-commit-config.yaml            # Проверки перед коммитом (задача 2.10)
 ├── pyproject.toml                     # Настройки ruff (задача 2.10)
+├── CONTRIBUTING.md                    # Правила веток, коммитов и PR (задача 2.11)
 ├── requirements.txt
 └── README.md
 ```
