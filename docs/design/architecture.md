@@ -82,6 +82,8 @@ telegram-schedule-bot/
 ├── data/                              # Тестовые данные (в git попадает только .gitkeep)
 ├── .env.example                       # Пример файла с переменными окружения
 ├── .gitignore
+├── .pre-commit-config.yaml            # Проверки перед коммитом (задача 2.10)
+├── pyproject.toml                     # Настройки ruff (задача 2.10)
 ├── requirements.txt
 └── README.md
 ```
@@ -180,7 +182,7 @@ graph TD
     C --> D[services]
     D --> E[database/repositories]
     E --> F[PostgreSQL]
-    
+
     G[APScheduler] --> D
 ```
 

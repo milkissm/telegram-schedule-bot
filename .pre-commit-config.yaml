@@ -1,0 +1,21 @@
+# Проверки, которые запускаются перед каждым коммитом.
+# Установка (один раз после клонирования):  pre-commit install
+# Ручной запуск по всем файлам:              pre-commit run --all-files
+
+repos:
+  # Базовые проверки файлов
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace      # убирает пробелы в конце строк
+      - id: end-of-file-fixer        # добавляет перевод строки в конец файла
+      - id: check-yaml               # проверяет синтаксис YAML
+      - id: check-merge-conflict     # не даёт закоммитить маркеры конфликта
+
+  # Линтер и форматтер. Ruff заменяет flake8 + black + isort.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.5
+    hooks:
+      - id: ruff-check
+        args: [--fix]                # исправляет то, что можно исправить автоматически
+      - id: ruff-format
