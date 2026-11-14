@@ -6,75 +6,99 @@
 
 ## Структура папок
 
+```
 telegram-schedule-bot/
 ├── src/
-│ ├── bot/ # Слой представления (Presentation Layer)
-│ │ ├── handlers/ # Обработчики команд и сообщений
-│ │ │ ├── start.py # /start, /help, /mygroup, /cancel, регистрация
-│ │ │ ├── schedule.py # /schedule, /today, /week
-│ │ │ ├── reminders.py # /reminder, /reminders
-│ │ │ ├── notes.py # /note, /notes
-│ │ │ ├── homework.py # /homework, /homeworks, /deadlines
-│ │ │ └── admin.py # /upload_schedule, /set_week (только для админов)
-│ │ ├── keyboards/ # Клавиатуры (Reply и Inline)
-│ │ │ ├── main_menu.py # Главное меню бота
-│ │ │ └── inline_menus.py # Inline-кнопки для выбора
-│ │ ├── middlewares/ # Промежуточные обработчики
-│ │ │ ├── check_registration.py # Проверка, выбрал ли пользователь группу
-│ │ │ └── check_admin.py # Проверка прав администратора
-│ │ └── fsm_states/ # Состояния FSM для пошаговых диалогов
-│ │ ── states.py
-│ │
-│ ├── services/ # Слой бизнес-логики (Business Logic Layer)
-│ │ ├── schedule_service.py # Логика работы с расписанием
-│ │ ├── reminder_service.py # Логика напоминаний
-│ │ ├── note_service.py # Логика заметок
-│ │ ├── homework_service.py # Логика домашних заданий
-│ │ └── notification_service.py # Отправка массовых уведомлений
-│ │
-│ ├── parsers/ # Парсинг расписания
-│ │ ├── excel_parser.py # Чтение и парсинг Excel-файлов СФУ
-│ │ ├── zip_handler.py # Работа с ZIP-архивами
-│ │ └── validators.py # Валидация данных из Excel
-│ │
-│ ├── database/ # Слой доступа к данным (Data Access Layer)
-│ │ ├── models/ # SQLAlchemy-модели (таблицы БД)
-│ │ │ ├── __init__.py
-│ │ │ ├── user.py # Модель пользователя
-│ │ │ ├── institute.py # Справочник институтов
-│ │ │ ├── course.py # Справочник курсов
-│ │ │ ├── group.py # Учебные группы
-│ │ │ ├── schedule.py # Расписание
-│ │ │ ├── reminder.py # Напоминания
-│ │ │ ├── note.py # Заметки
-│ │ │ ├── homework.py # Домашние задания
-│ │ │ └── settings.py # Настройки бота (текущая учебная неделя)
-│ │ ├── repositories/ # Функции запросов к БД
-│ │ │ ├── user_repo.py
-│ │ │ ├── schedule_repo.py
-│ │ │ └── ...
-│ │ └── connection.py # Подключение к PostgreSQL
-│ │
-│ ├── utils/ # Вспомогательные функции
-│ │ ├── config.py # Загрузка настроек из .env и константы
-│ │ ├── logger.py # Настройка логирования
-│ │ └── helpers.py # Общие утилиты (форматирование времени и т.д.)
-│ │
-│ └── main.py # Точка входа в приложение
-│
-├── migrations/ # Миграции БД (Alembic)
-├── tests/ # Тесты
-│ ├── test_parsers/
-│ ├── test_handlers/
-│ └── test_services/
-├── docs/ # Документация проекта
-├── logs/ # Логи бота
-├── data/ # Тестовые данные (sample_groups.json)
-── .env.example # Пример файла с переменными окружения
+│   ├── __init__.py
+│   ├── main.py                        # Точка входа в приложение
+│   ├── bot/                           # Слой представления (Presentation Layer)
+│   │   ├── __init__.py
+│   │   ├── handlers/                  # Обработчики команд и сообщений
+│   │   │   ├── __init__.py
+│   │   │   ├── start.py               # /start, /help, /mygroup, /cancel, регистрация
+│   │   │   ├── schedule.py            # /schedule, /today, /week
+│   │   │   ├── reminders.py           # /reminder, /reminders
+│   │   │   ├── notes.py               # /note, /notes
+│   │   │   ├── homework.py            # /homework, /homeworks, /deadlines
+│   │   │   └── admin.py               # /upload_schedule, /set_week (только для админов)
+│   │   ├── keyboards/                 # Клавиатуры (Reply и Inline)
+│   │   │   ├── __init__.py
+│   │   │   ├── main_menu.py           # Главное меню бота
+│   │   │   └── inline_menus.py        # Inline-кнопки для выбора
+│   │   ├── middlewares/               # Промежуточные обработчики
+│   │   │   ├── __init__.py
+│   │   │   ├── check_registration.py  # Проверка, выбрал ли пользователь группу
+│   │   │   └── check_admin.py         # Проверка прав администратора
+│   │   └── fsm_states/                # Состояния FSM для пошаговых диалогов
+│   │       ├── __init__.py
+│   │       └── states.py
+│   ├── services/                      # Слой бизнес-логики (Business Logic Layer)
+│   │   ├── __init__.py
+│   │   ├── schedule_service.py        # Логика работы с расписанием
+│   │   ├── reminder_service.py        # Логика напоминаний
+│   │   ├── note_service.py            # Логика заметок
+│   │   ├── homework_service.py        # Логика домашних заданий
+│   │   └── notification_service.py    # Отправка массовых уведомлений
+│   ├── parsers/                       # Парсинг расписания
+│   │   ├── __init__.py
+│   │   ├── excel_parser.py            # Чтение и парсинг Excel-файлов СФУ
+│   │   ├── zip_handler.py             # Работа с ZIP-архивами
+│   │   └── validators.py              # Валидация данных из Excel
+│   ├── database/                      # Слой доступа к данным (Data Access Layer)
+│   │   ├── __init__.py
+│   │   ├── connection.py              # Подключение к PostgreSQL
+│   │   ├── models/                    # SQLAlchemy-модели (таблицы БД)
+│   │   │   ├── __init__.py
+│   │   │   ├── user.py                # Модель пользователя
+│   │   │   ├── institute.py           # Справочник институтов
+│   │   │   ├── course.py              # Справочник курсов
+│   │   │   ├── group.py               # Учебные группы
+│   │   │   ├── schedule.py            # Расписание
+│   │   │   ├── reminder.py            # Напоминания
+│   │   │   ├── note.py                # Заметки
+│   │   │   ├── homework.py            # Домашние задания
+│   │   │   └── settings.py            # Настройки бота (текущая учебная неделя)
+│   │   └── repositories/              # Функции запросов к БД
+│   │       ├── __init__.py
+│   │       ├── user_repo.py
+│   │       ├── schedule_repo.py
+│   │       └── ...
+│   └── utils/                         # Вспомогательные функции
+│       ├── __init__.py
+│       ├── config.py                  # Загрузка настроек из .env и константы
+│       ├── logger.py                  # Настройка логирования
+│       └── helpers.py                 # Общие утилиты (форматирование времени и т.д.)
+├── migrations/                        # Миграции БД, создаются командой alembic init (задача 2.2)
+├── tests/                             # Тесты
+│   ├── __init__.py
+│   ├── test_parsers/
+│   │   └── __init__.py
+│   ├── test_handlers/
+│   │   └── __init__.py
+│   └── test_services/
+│       └── __init__.py
+├── .github/
+│   └── pull_request_template.md        # Шаблон описания pull request (задача 2.11)
+├── docs/                              # Документация проекта
+├── logs/                              # Логи бота (в git попадает только .gitkeep)
+├── data/                              # Тестовые данные (в git попадает только .gitkeep)
+├── .env.example                       # Пример файла с переменными окружения
 ├── .gitignore
+├── .pre-commit-config.yaml            # Проверки перед коммитом (задача 2.10)
+├── pyproject.toml                     # Настройки ruff (задача 2.10)
+├── CONTRIBUTING.md                    # Правила веток, коммитов и PR (задача 2.11)
 ├── requirements.txt
 └── README.md
+```
 
+Каждый каталог, содержащий Python-код, имеет `__init__.py` — без него импорт
+вида `from src.services import ...` не работает, а pytest не различает одноимённые
+тестовые модули из разных папок.
+
+Файлы `__init__.py` и каталоги создаются в задаче 2.7. Из модулей на этом этапе
+заводятся только три заготовки: `src/main.py`, `src/database/connection.py`,
+`src/utils/config.py`. Остальные модули из дерева появляются в задачах эпиков 3–9;
+пустые файлы заранее не создаются.
 
 ## Принцип взаимодействия слоёв
 
@@ -161,7 +185,7 @@ graph TD
     C --> D[services]
     D --> E[database/repositories]
     E --> F[PostgreSQL]
-    
+
     G[APScheduler] --> D
 ```
 
