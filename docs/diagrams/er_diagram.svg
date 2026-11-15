@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker></defs>
+<rect width="1400" height="900" fill="#ffffff"/>
+<text x="24" y="30" font-size="15" font-weight="bold" fill="#333">Схема базы данных Telegram-Schedule-Bot</text>
+<rect x="40" y="40" width="240" height="124" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="48" y="60" font-size="13" font-weight="bold" fill="#1a3a5c">institutes</text>
+<text x="50" y="78" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="250" y="78" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="50" y="98" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">name</text>
+<text x="50" y="118" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">short_name</text>
+<text x="250" y="118" font-size="10.5" fill="#a03030" font-weight="bold">UK</text>
+<text x="50" y="138" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">is_active</text>
+<rect x="380" y="40" width="240" height="144" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="388" y="60" font-size="13" font-weight="bold" fill="#1a3a5c">courses</text>
+<text x="390" y="78" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="590" y="78" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="390" y="98" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">institute_id</text>
+<text x="590" y="98" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="390" y="118" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">degree_level</text>
+<text x="390" y="138" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">course_number</text>
+<text x="390" y="158" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">created_at</text>
+<rect x="720" y="40" width="240" height="144" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="728" y="60" font-size="13" font-weight="bold" fill="#1a3a5c">groups</text>
+<text x="730" y="78" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="930" y="78" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="730" y="98" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">course_id</text>
+<text x="930" y="98" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="730" y="118" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">name</text>
+<text x="730" y="138" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">subgroup</text>
+<text x="730" y="158" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">is_active</text>
+<rect x="1060" y="40" width="240" height="244" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1068" y="60" font-size="13" font-weight="bold" fill="#1a3a5c">schedule</text>
+<text x="1070" y="78" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="1270" y="78" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="1070" y="98" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">group_id</text>
+<text x="1270" y="98" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="1070" y="118" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">week</text>
+<text x="1070" y="138" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">day_of_week</text>
+<text x="1070" y="158" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">pair_number</text>
+<text x="1070" y="178" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">subject</text>
+<text x="1070" y="198" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">teacher</text>
+<text x="1070" y="218" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">room</text>
+<text x="1070" y="238" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">building</text>
+<text x="1070" y="258" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">lesson_type</text>
+<rect x="400" y="340" width="240" height="204" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="408" y="360" font-size="13" font-weight="bold" fill="#1a3a5c">users</text>
+<text x="410" y="378" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="610" y="378" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="410" y="398" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">telegram_id</text>
+<text x="610" y="398" font-size="10.5" fill="#a03030" font-weight="bold">UK</text>
+<text x="410" y="418" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">username</text>
+<text x="410" y="438" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">first_name</text>
+<text x="410" y="458" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">last_name</text>
+<text x="410" y="478" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">group_id</text>
+<text x="610" y="478" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="410" y="498" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">created_at</text>
+<text x="410" y="518" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">is_active</text>
+<rect x="1060" y="340" width="240" height="164" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1068" y="360" font-size="13" font-weight="bold" fill="#1a3a5c">reminders</text>
+<text x="1070" y="378" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="1270" y="378" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="1070" y="398" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">user_id</text>
+<text x="1270" y="398" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="1070" y="418" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">schedule_id</text>
+<text x="1270" y="418" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="1070" y="438" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">remind_before</text>
+<text x="1070" y="458" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">is_active</text>
+<text x="1070" y="478" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">created_at</text>
+<rect x="400" y="620" width="240" height="184" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="408" y="640" font-size="13" font-weight="bold" fill="#1a3a5c">notes</text>
+<text x="410" y="658" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="610" y="658" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="410" y="678" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">user_id</text>
+<text x="610" y="678" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="410" y="698" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">subject</text>
+<text x="410" y="718" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">title</text>
+<text x="410" y="738" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">content</text>
+<text x="410" y="758" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">created_at</text>
+<text x="410" y="778" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">updated_at</text>
+<rect x="760" y="620" width="240" height="184" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="768" y="640" font-size="13" font-weight="bold" fill="#1a3a5c">homework</text>
+<text x="770" y="658" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="970" y="658" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="770" y="678" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">user_id</text>
+<text x="970" y="678" font-size="10.5" fill="#a03030" font-weight="bold">FK</text>
+<text x="770" y="698" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">subject</text>
+<text x="770" y="718" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">description</text>
+<text x="770" y="738" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">due_date</text>
+<text x="770" y="758" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">is_completed</text>
+<text x="770" y="778" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">created_at</text>
+<rect x="1060" y="580" width="240" height="124" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1068" y="600" font-size="13" font-weight="bold" fill="#1a3a5c">settings</text>
+<text x="1070" y="618" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">id</text>
+<text x="1270" y="618" font-size="10.5" fill="#a03030" font-weight="bold">PK</text>
+<text x="1070" y="638" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">week_number</text>
+<text x="1070" y="658" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">week_start_date</text>
+<text x="1070" y="678" font-size="11.5" fill="#20303f" font-family="Consolas, monospace">updated_at</text>
+<line x1="280" y1="102" x2="380" y2="112" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="315" y="95" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="330" y="107" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="620" y1="112" x2="720" y2="112" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="655" y="100" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="670" y="112" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="960" y1="112" x2="1060" y2="162" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="995" y="125" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="1010" y="137" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="1180" y1="284" x2="1180" y2="340" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="1165" y="300" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="1180" y="312" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="640" y1="431" x2="1060" y2="425" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="835" y="416" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="850" y="428" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="520" y1="544" x2="520" y2="620" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="505" y="570" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="520" y="582" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="640" y1="493" x2="868" y2="620" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="739" y="544" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="754" y="556" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<line x1="840" y1="184" x2="604" y2="340" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="707" y="250" width="30" height="16" fill="#ffffff" stroke="none"/>
+<text x="722" y="262" font-size="11" fill="#333" text-anchor="middle">1:N</text>
+<text x="24" y="880" font-size="11" fill="#666">PK — первичный ключ, FK — внешний ключ, UK — уникальное поле</text>
+</svg>

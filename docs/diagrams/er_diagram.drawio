@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="ER-диаграмма" id="er-diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="institutes" value="&lt;b&gt;institutes&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;name&lt;br&gt;short_name  &lt;i&gt;UK&lt;/i&gt;&lt;br&gt;is_active" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="240" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="courses" value="&lt;b&gt;courses&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;institute_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;degree_level&lt;br&gt;course_number&lt;br&gt;created_at" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="240" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="groups" value="&lt;b&gt;groups&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;course_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;name&lt;br&gt;subgroup&lt;br&gt;is_active" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="240" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="schedule" value="&lt;b&gt;schedule&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;group_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;week&lt;br&gt;day_of_week&lt;br&gt;pair_number&lt;br&gt;subject&lt;br&gt;teacher&lt;br&gt;room&lt;br&gt;building&lt;br&gt;lesson_type" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="40" width="240" height="244" as="geometry" />
+        </mxCell>
+        <mxCell id="users" value="&lt;b&gt;users&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;telegram_id  &lt;i&gt;UK&lt;/i&gt;&lt;br&gt;username&lt;br&gt;first_name&lt;br&gt;last_name&lt;br&gt;group_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;created_at&lt;br&gt;is_active" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="240" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="reminders" value="&lt;b&gt;reminders&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;user_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;schedule_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;remind_before&lt;br&gt;is_active&lt;br&gt;created_at" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="340" width="240" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="notes" value="&lt;b&gt;notes&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;user_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;subject&lt;br&gt;title&lt;br&gt;content&lt;br&gt;created_at&lt;br&gt;updated_at" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="620" width="240" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="homework" value="&lt;b&gt;homework&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;user_id  &lt;i&gt;FK&lt;/i&gt;&lt;br&gt;subject&lt;br&gt;description&lt;br&gt;due_date&lt;br&gt;is_completed&lt;br&gt;created_at" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="760" y="620" width="240" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="settings" value="&lt;b&gt;settings&lt;/b&gt;&lt;br&gt;id  &lt;i&gt;PK&lt;/i&gt;&lt;br&gt;week_number&lt;br&gt;week_start_date&lt;br&gt;updated_at" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="580" width="240" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#333333;" edge="1" parent="1" source="institutes" target="courses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#333333;" edge="1" parent="1" source="courses" target="groups">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#333333;" edge="1" parent="1" source="groups" target="schedule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;" edge="1" parent="1" source="schedule" target="reminders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=1;exitY=0.45;entryX=0;entryY=0.52;strokeColor=#333333;" edge="1" parent="1" source="users" target="reminders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;" edge="1" parent="1" source="users" target="notes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=1;exitY=0.75;entryX=0.45;entryY=0;strokeColor=#333333;" edge="1" parent="1" source="users" target="homework">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="1:N" style="edgeStyle=none;html=1;endArrow=block;endFill=1;fontSize=11;rounded=0;exitX=0.5;exitY=1;entryX=0.85;entryY=0;strokeColor=#333333;" edge="1" parent="1" source="groups" target="users">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
