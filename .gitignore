@@ -25,3 +25,6 @@ desktop.ini
 
 *.tmp
 *.log
+
+# Кэш инструментов
+.ruff_cache/
