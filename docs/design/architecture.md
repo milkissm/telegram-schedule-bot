@@ -81,7 +81,7 @@ telegram-schedule-bot/
 │   └── pull_request_template.md        # Шаблон описания pull request (задача 2.11)
 ├── docs/                              # Документация проекта
 ├── logs/                              # Логи бота (в git попадает только .gitkeep)
-├── data/                              # Тестовые данные (в git попадает только .gitkeep)
+├── data/                              # Тестовые данные (sample_groups.json)
 ├── .env.example                       # Пример файла с переменными окружения
 ├── .gitignore
 ├── .pre-commit-config.yaml            # Проверки перед коммитом (задача 2.10)
