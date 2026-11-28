@@ -1,0 +1,42 @@
+{
+  "institutes": [
+    {
+      "short_name": "ИКИТ",
+      "name": "Институт космических и информационных технологий",
+      "courses": [
+        {
+          "course_number": 3,
+          "groups": [
+            { "name": "КИ24-01", "subgroups": [1, 2] },
+            { "name": "КИ24-02", "subgroups": [1, 2] },
+            { "name": "КИ24-02/1Б", "subgroups": [1, 2] },
+            { "name": "КИ24-02/2Б", "subgroups": [1, 2] },
+            { "name": "КИ24-02/3Б", "subgroups": [1, 2] },
+            { "name": "КИ24-03Б", "subgroups": [1, 2] },
+            { "name": "КИ24-03БС", "subgroups": [1] },
+            { "name": "КИ24-04Б", "subgroups": [1, 2] },
+            { "name": "КИ24-05Б", "subgroups": [1, 2] },
+            { "name": "КИ24-05БС", "subgroups": [1] },
+            { "name": "КИ24-06Б", "subgroups": [1, 2] },
+            { "name": "КИ24-07Б", "subgroups": [1, 2] },
+            { "name": "КИ24-08Б", "subgroups": [1, 2] },
+            { "name": "КИ24-10/1БГ", "subgroups": [1, 2] },
+            { "name": "КИ24-10/2Б", "subgroups": [1, 2] },
+            { "name": "КИ24-10/3Б", "subgroups": [1, 2] },
+            { "name": "КИ24-11Б", "subgroups": [1, 2] },
+            { "name": "КИ24-12Б", "subgroups": [1, 2] },
+            { "name": "КИ24-13Б", "subgroups": [1, 2] },
+            { "name": "КИ24-14Б", "subgroups": [1, 2] },
+            { "name": "КИ24-15Б", "subgroups": [1, 2] },
+            { "name": "КИ24-16/1Б", "subgroups": [1, 2] },
+            { "name": "КИ24-16/2Б", "subgroups": [1, 2] },
+            { "name": "КИ24-17/1Б", "subgroups": [1, 2] },
+            { "name": "КИ24-18Б", "subgroups": [1, 2] },
+            { "name": "КИ24-20Б", "subgroups": [1, 2] },
+            { "name": "КИ24-21Б", "subgroups": [1, 2] }
+          ]
+        }
+      ]
+    }
+  ]
+}
